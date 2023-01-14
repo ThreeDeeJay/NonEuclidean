@@ -14,12 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
     - uses: ThreeDeeJay/setup-windows10-sdk-action@32853272e2bac6b63382df1ca1985b8706a484cc
       with:
         sdk-version: 15063
-
-    - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Restore NuGet packages
       working-directory: ${{env.GITHUB_WORKSPACE}}
