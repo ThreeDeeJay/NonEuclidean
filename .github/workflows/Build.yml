@@ -14,9 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.11
+    - uses: ThreeDeeJay/setup-windows10-sdk-action@v1.11
       with:
-        sdk-version: 18362
+        sdk-version: 15063
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
